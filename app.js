@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
             const parsedBody = Buffer.concat(body).toString(); 
             console.log(parsedBody);
         });
-        fs.writeFileSync('message.txt', 'test');
+        fs.writeFileSync('message.txt', 'test write file');
         res.statusCode = 302;
         res.setHeader('Location', '/');
         return res.end();
